@@ -1,6 +1,5 @@
 -- ~/.config/nvim/lua/plugins/specs/myplugin.lua
 return {
-	dir = "/home/nkruger/github/pxt/pixel.lua", -- Local plugin
 	lazy = true,
 	cmd = { "SayHello" }, -- Only loads on :SayHello
 	config = function()
