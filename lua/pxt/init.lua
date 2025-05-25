@@ -12,7 +12,7 @@ end
 
 function pxt.config()
 	pxt.monoFont()
-	vim.api.nvim_create_user_command("pxt.font", function()
+	vim.api.nvim_create_user_command("pxtFont", function()
 		pxt.monoFont()
 	end, {})
 end
