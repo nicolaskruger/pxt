@@ -12,9 +12,6 @@ end
 
 function pxt.config()
 	-- pxt.monoFont()
-	vim.api.nvim_create_user_command("pxtFont", function()
-		-- pxt.monoFont()
-	end, {})
 end
 
 return pxt
