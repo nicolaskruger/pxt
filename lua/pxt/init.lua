@@ -1,6 +1,7 @@
 local pxt = {}
 
 function pxt.monoFont()
+	print("change font")
 	vim.api.nvim_create_autocmd("BufEnter", {
 		pattern = "*.pxt",
 		callback = function()
