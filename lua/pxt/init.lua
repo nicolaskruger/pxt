@@ -1,7 +1,16 @@
-local M = {}
+local pxt = {}
 
-function M.hello()
-	print("Olá do meu plugin!")
+function pxt.monoFont()
+	vim.api.nvim_create_autocmd("BufEnter", {
+		pattern = "*.pxt",
+		callback = function()
+			vim.o.guifont = "FiraCode Nerd Font:h14"
+		end,
+	})
 end
 
-return M
+function pxt.config()
+	pxt.monoFont()
+end
+
+return pxt
