@@ -11,5 +11,7 @@ function pxt.monoFont()
 end
 
 function pxt.config() end
-
+function pxt.hello()
+	print("🍵 hello 👽")
+end
 return pxt
