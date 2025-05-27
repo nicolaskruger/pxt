@@ -10,10 +10,6 @@ function pxt.monoFont()
 	})
 end
 
-function pxt.config()
-	vim.api.nvim_create_user_command("pxtHello", function()
-		require("pxt.commands").pxtHello()
-	end, {})
-end
+function pxt.config() end
 
 return pxt
