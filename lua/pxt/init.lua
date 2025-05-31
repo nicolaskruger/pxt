@@ -2,6 +2,7 @@ local pxt = {}
 
 function pxt.mono_font()
 	print("change font")
+	vim.api.nvim_set_hl(0, "Normal", { bg = "#1e1e2e" })
 	vim.api.nvim_create_autocmd("BufEnter", {
 		pattern = "*.pxt",
 		callback = function()
