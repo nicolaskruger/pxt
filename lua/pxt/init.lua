@@ -1,9 +1,11 @@
 local pxt = {}
 
 function pxt.mono_font()
-	print("change font :ba")
+	print("change font 💿")
+	local aroba = "@"
 	vim.api.nvim_set_hl(0, "Normal", { bg = "#FFFFFF" })
-	vim.o.guifont = "Iosevka Fixed:h12"
+	vim.api.nvim_set_hl(0, aroba, { bg = "#ff0000", fg = "#ffffff" })
+	vim.fn.matchadd(aroba, aroba)
 	vim.api.nvim_create_autocmd("BufEnter", {
 		pattern = "*.pxt",
 		callback = function()
