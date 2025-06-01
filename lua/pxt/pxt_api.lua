@@ -8,6 +8,10 @@ local api = {}
 -- @return Pxt
 function api.pxt(line)
 	local key, color = string.match(line, "(%w)=(%w+)")
+	if key == nil or color == nil then
+		return nil
+	end
+
 	return {
 		key,
 		color,

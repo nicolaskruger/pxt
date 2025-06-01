@@ -9,8 +9,12 @@ function pxt.set_up()
 			local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
 			for _, line in ipairs(lines) do
 				local var = api.pxt(line)
-				vim.api.nvim_set_hl(0, var.key, { bg = var.color, fg = var.color })
-				vim.fn.matchadd(var.key, var.color)
+				if var ~= nil then
+					print("key", var.key)
+					print("color", var.color)
+					vim.api.nvim_set_hl(0, var.key, { bg = var.color, fg = var.color })
+					vim.fn.matchadd(var.key, var.color)
+				end
 			end
 		end,
 	})
