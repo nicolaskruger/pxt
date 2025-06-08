@@ -7,7 +7,13 @@ local api = {}
 -- @param line string
 -- @return Pxt
 function api.pxt(line)
-	local key, color = string.match(line, "(%w)=(%w+)")
+	local function pattern()
+		return string.match(line, "(%w)=(%w+)")
+	end
+	if ~pattern() then
+		return nil
+	end
+	local key, color = pattern()
 	if key == nil or color == nil then
 		return nil
 	end
